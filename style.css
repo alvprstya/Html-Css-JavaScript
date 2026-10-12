@@ -1,0 +1,443 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: none;
+}
+
+body {
+    background-color: #12bf63;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 40px 40px;
+    color: #0d1b1e;
+    min-height: 100vh;
+}
+
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #12bf63;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.splash-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 90%;
+}
+
+.splash-sub {
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #12bf63;
+}
+
+.btn-splash {
+    display: inline-block;
+    margin-top: 20px;
+    background: #000;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-splash:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Menyembunyikan splash screen saat checkbox di-klik */
+#splash-toggle:checked~.splash-screen {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.4rem;
+}
+
+.logo span {
+    color: #fff;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.sub-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.main-heading {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin: 10px 0;
+}
+
+.highlight-box {
+    background: #000;
+    color: #fff;
+    padding: 0 12px;
+    border-radius: 12px;
+}
+
+.hero-desc {
+    max-width: 500px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+.btn-audio {
+    background: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.btn-audio:hover {
+    transform: scale(1.05);
+}
+
+.tab-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 30px 20px 10px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid #000;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#tab1:checked~.tab-navigation .label-tab1,
+#tab2:checked~.tab-navigation .label-tab2,
+#tab3:checked~.tab-navigation .label-tab3 {
+    background: #000;
+    color: #fff;
+}
+
+.tab-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+
+#tab1:checked~.tab-container .content-tab1,
+#tab2:checked~.tab-container .content-tab2,
+#tab3:checked~.tab-container .content-tab3 {
+    display: block;
+}
+
+.card-content {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.profile-img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #000000;
+    box-shadow: 4px 4px 0px #000000;
+    flex-shrink: 0;
+}
+
+.profile-bio h2 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.profile-bio p {
+    color: #333;
+    line-height: 1.5;
+}
+
+.info-grid,
+.drs-grid,
+.materi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.info-box,
+.drs-item,
+.materi-card {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 16px;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 0px #000;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.materi-card:hover,
+.drs-item:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #000;
+}
+
+.sks-badge {
+    background: #12bf63;
+    color: #fff;
+    font-weight: 800;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #000;
+    color: #ffffff;
+}
+
+/* Kotak Spotify & Instagram Klik */
+.spotify-clickable-box {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.spotify-clickable-box:hover {
+    background-color: #1ed760;
+    color: #000000;
+    transform: translate(-3px, -3px);
+    box-shadow: 6px 6px 0px #000000;
+}
+
+/* Tombol
+.tugas-wrap { margin-top: 25px; }
+/* tampil hanya saat tab "Tentang Saya" aktif (memakai class content-tab1) */
+.tugas-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0 20px;
+    padding: 15px;
+    border: 2px solid #000;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 #000;
+    background: #f8f9fa;
+}
+
+.tugas-foto {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #000;
+}
+
+.nim {
+    font-weight: 700;
+}
+
+.t-step {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px dashed #ccc;
+}
+
+.t-step:first-of-type {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.t-step[hidden],
+.t-output[hidden] {
+    display: none;
+}
+
+.t-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.t-row label {
+    min-width: 140px;
+    font-weight: 700;
+}
+
+.tugas-card input[type="text"],
+.tugas-card input[type="number"],
+.tugas-card select {
+    padding: 9px 12px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    min-width: 220px;
+    background: #fff;
+}
+
+.tugas-card input:focus,
+.tugas-card select:focus {
+    outline: none;
+    box-shadow: 3px 3px 0 #12bf63;
+}
+
+.t-label {
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.t-opsi {
+    margin-bottom: 14px;
+}
+
+/* radio global disembunyikan (untuk tab) -> tampilkan lagi khusus di sini */
+.tugas-card input[type="radio"] {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    accent-color: #12bf63;
+    vertical-align: middle;
+}
+
+.t-radio {
+    display: block;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.t-btn {
+    background: #000;
+    color: #fff;
+    border: 2px solid #000;
+    padding: 10px 26px;
+    border-radius: 30px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.t-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, .25);
+}
+
+.t-output {
+    margin-top: 22px;
+    padding: 18px;
+    background: #12bf63;
+    color: #fff;
+    font-weight: 700;
+    border: 2px solid #000;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0 #000;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-heading {
+        font-size: 2.2rem;
+    }
+
+    .tab-navigation {
+        flex-direction: column;
+    }
+}

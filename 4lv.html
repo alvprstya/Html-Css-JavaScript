@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alvian — Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="Lagu2.mp3" type="audio/mpeg">
+    </audio>
+
+    <input type="checkbox" id="splash-toggle">
+
+    <div class="splash-screen">
+        <div class="splash-card">
+            <h1>Whats Up!!</h1>
+            <p>Klik tombol di bawah!</p>
+            <label for="splash-toggle" id="enter-btn" class="btn-splash">Open &rarr;</label>
+        </div>
+    </div>
+
+    <div class="main-content">
+
+        <nav class="navbar">
+            <div class="logo">Made<span> In</span> Struggle</div>
+        </nav>
+
+        <header class="hero">
+            <span class="sub-title">GOOD MUSIC, LOWRIDER DREAMS, AND AN OLD-SCHOOL STATE OF MIND</span>
+            <h1 class="main-heading">
+                Alvian <span class="highlight-box">Prasetya</span>
+            </h1>
+            <p class="hero-desc">Pilih tab di bawah untuk melihat informasi profil, jadwal kuliah, dan rencana studi</p>
+        </header>
+
+        <input type="radio" name="tab-group" id="tab1" checked>
+        <input type="radio" name="tab-group" id="tab2">
+        <input type="radio" name="tab-group" id="tab3">
+
+
+        <div class="tab-navigation">
+            <label for="tab1" class="tab-btn label-tab1">Tentang Saya</label>
+            <label for="tab2" class="tab-btn label-tab2">Jadwal Kuliah</label>
+            <label for="tab3" class="tab-btn label-tab3">Rencana Studi (DRS)</label>
+
+        </div>
+
+        <main class="tab-container">
+
+
+            <section class="tab-content content-tab1">
+                <div class="card-content">
+                    <div class="profile-header">
+                        <img src="Picture.jpeg" alt="Foto Profil Alvian" class="profile-img">
+                        <div class="profile-bio">
+                            <h2>Tentang Saya</h2>
+                            <p>Saya mahasiswa Informatika yang sedang belajar Pemrograman Web. </p>
+                        </div>
+                    </div>
+
+                    <div class="info-grid">
+                        <a href="https://open.spotify.com/user/314pjvvf73syjsqp3s2eezq2lk6i?si=fa65e7d05b334da0"
+                            target="_blank" class="info-box spotify-clickable-box">
+                            <h3>Spotify </h3>
+                            <p>Kunjungi profil Spotify saya.</p>
+                        </a>
+                        <a href="https://www.instagram.com/alvprstya?stkn=MTZqc2ZrMGZhYnpxOA==" target="_blank"
+                            class="info-box spotify-clickable-box">
+                            <h3>Instagram </h3>
+                            <p>Kunjungi instagram saya.</p>
+                        </a>
+                        <div class="info-box">
+                            <h3>Hobi</h3>
+                            <p>Ngopi dan Belajar</p>
+                        </div>
+                        <div class="info-box">
+                            <h3>Asal</h3>
+                            <p>Texas</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="tab-content content-tab1 tugas-wrap">
+                <div class="card-content tugas-card">
+                    <h2>Tugas</h2>
+                    <div class="tugas-header">
+                        <img src="Picture.jpeg" alt="Foto Alvian" class="tugas-foto">
+                        <div>
+                            <strong>Alvian Prasetya</strong><br>
+                            NIM: <span class="nim">255314061</span>
+                        </div>
+                    </div>
+
+                    <div id="t-step1" class="t-step">
+                        <div class="t-row"><label for="t-nama">Nama :</label>
+                            <input type="text" id="t-nama" placeholder="Masukkan nama">
+                        </div>
+                        <div class="t-row"><label for="t-jml">Jumlah Pilihan :</label>
+                            <input type="number" id="t-jml" min="1" max="10" step="1" value="1">
+                        </div>
+                        <button type="button" class="t-btn" id="t-ok1">OK</button>
+                    </div>
+                    <div id="t-step2" class="t-step" hidden></div>
+                    <div id="t-step3" class="t-step" hidden></div>
+                    <div id="t-step4" class="t-step" hidden></div>
+                    <div id="t-output" class="t-output" hidden></div>
+                </div>
+            </section>
+            <!-- ===== AKHIR TUGAS 4 ===== -->
+
+            <section class="tab-content content-tab2">
+                <div class="card-content">
+                    <h2>Jadwal Kuliah</h2>
+                    <div class="table-responsive">
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Hari</th>
+                                    <th>Mata Kuliah</th>
+                                    <th>Waktu</th>
+                                    <th>Ruang</th>
+                                    <th>Kelas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Senin</td>
+                                    <td>Aljabar Linear</td>
+                                    <td>10:00 - 12:00</td>
+                                    <td>K.204</td>
+                                    <td>D</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Sistem Cerdas</td>
+                                    <td>13:00 - 16:00</td>
+                                    <td>K.204</td>
+                                    <td>C</td>
+                                </tr>
+                                <tr>
+                                    <td>Selasa</td>
+                                    <td>Machine Learning</td>
+                                    <td>10:00 - 13:00</td>
+                                    <td>Lab Basis Data A</td>
+                                    <td>D</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Pemrograman Berbasis Web</td>
+                                    <td>13:00 - 18:00</td>
+                                    <td>Lab Jaringan Komputer E</td>
+                                    <td>B</td>
+                                </tr>
+                                <tr>
+                                    <td>Rabu</td>
+                                    <td>Probabilitas Lanjut</td>
+                                    <td>07:00 - 09:00</td>
+                                    <td>K.204</td>
+                                    <td>A</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Machine Learning</td>
+                                    <td>10:00 - 13:00</td>
+                                    <td>Lab Basis Data B</td>
+                                    <td>DP</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Manajemen Data</td>
+                                    <td>13:00 - 18:00</td>
+                                    <td>Lab Komputer Dasar B</td>
+                                    <td>D</td>
+                                </tr>
+                                <tr>
+                                    <td>Kamis</td>
+                                    <td>Metode Numerik</td>
+                                    <td>13:00 - 15:00</td>
+                                    <td>K.207</td>
+                                    <td>D</td>
+                                </tr>
+                                <tr>
+                                    <td>Jumat</td>
+                                    <td>Internet dan Aplikasinya</td>
+                                    <td>10:00 - 13:00</td>
+                                    <td>Lab Jaringan Komputer A</td>
+                                    <td>D</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section class="tab-content content-tab3">
+                <div class="card-content">
+                    <h2>Daftar Rencana Studi (DRS)</h2>
+                    <div class="drs-grid">
+                        <div class="drs-item">
+                            <span class="sks-badge">2 SKS</span>
+                            <h3>Aljabar Linear</h3>
+                            <p>Kode: MATS32W | Wajib</p>
+                        </div>
+                        <div class="drs-item">
+                            <span class="sks-badge">3 SKS</span>
+                            <h3>Internet dan Aplikasinya</h3>
+                            <p>Kode: SNET31W | Wajib</p>
+                        </div>
+                        <div class="drs-item">
+                            <span class="sks-badge">3 SKS</span>
+                            <h3>Manajemen Data</h3>
+                            <p>Kode: DAIS31W | Wajib</p>
+                        </div>
+                        <div class="drs-item">
+                            <span class="sks-badge">2 SKS</span>
+                            <h3>Metode Numerik</h3>
+                            <p>Kode: MATS31W | Wajib</p>
+                        </div>
+                        <div class="drs-item">
+                            <span class="sks-badge">4 SKS</span>
+                            <h3>Machine Learning</h3>
+                            <p>Kode: DAIS32W | Wajib</p>
+                        </div>
+                        <div class="drs-item">
+                            <span class="sks-badge">3 SKS</span>
+                            <h3>Pemrograman Berbasis Web</h3>
+                            <p>Kode: PROG31W | Wajib</p>
+                        </div>
+                        <div class="drs-item">
+                            <span class="sks-badge">2 SKS</span>
+                            <h3>Probabilitas Lanjut</h3>
+                            <p>Kode: MATS21W | Wajib</p>
+                        </div>
+                        <div class="drs-item">
+                            <span class="sks-badge">3 SKS</span>
+                            <h3>Sistem Cerdas</h3>
+                            <p>Kode: DAIS21W | Wajib</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2026 ALvian Prasetya. Sanata Dharma University.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const bgMusic = document.getElementById('bg-music');
+        const enterBtn = document.getElementById('enter-btn');
+        const toggleAudioBtn = document.getElementById('toggle-audio-btn');
+
+        enterBtn.addEventListener('click', () => {
+            bgMusic.play().catch(error => {
+                console.log("Audio playback error:", error);
+            });
+        });
+    </script>
+
+
+    <script>
+        (function () {
+            const MAX_PILIHAN = 10;
+            const NAMA_LANGKAH = ["Data", "Pilihan", "Pilih", "Email", "Hasil"];
+            let pilihan = [];
+            let nama = "", jml = 0, jmllama = 0, terpilih = "";
+
+            const $ = (id) => document.getElementById(id);
+
+            function el(tag, attrs, text) {
+                const e = document.createElement(tag);
+                Object.assign(e, attrs || {});
+                if (text !== undefined) e.textContent = text;
+                return e;
+            }
+            function row(labelText, input) {
+                const r = el("div", { className: "t-row" });
+                r.append(el("label", { htmlFor: input.id }, labelText), input);
+                return r;
+            }
+            function bersihkanDari(n) {
+                for (let i = n; i <= 4; i++) { $("t-step" + i).hidden = true; $("t-step" + i).replaceChildren(); }
+                $("t-output").hidden = true;
+                $("t-output").textContent = "";
+            }
+
+            //Langkah 1: nama & jumlah
+            function prosesLangkah1() {
+                const n = $("t-nama").value.trim();
+                const raw = $("t-jml").value.trim();
+                const j = Number(raw);
+
+                if (!/^[A-Za-z][A-Za-z\s.'-]{1,49}$/.test(n)) {
+                    alert("Nama wajib diisi (2-50 karakter, hanya huruf, spasi, titik, apostrof, atau strip).");
+                    $("t-nama").focus(); return;
+                }
+                if (raw === "" || !Number.isInteger(j) || j < 1 || j > MAX_PILIHAN) {
+                    alert("Jumlah pilihan harus bilangan bulat antara 1 sampai " + MAX_PILIHAN + ".");
+                    $("t-jml").value = ""; $("t-jml").focus(); return;
+                }
+                nama = n; jml = j;
+                bersihkanDari(2);
+                buatInputPilihan();
+            }
+
+            //Langkah 2: input teks pilihan (loop)
+            function buatInputPilihan() {
+                const box = $("t-step2");
+                for (let i = 1; i <= jml; i++) {
+                    box.append(row("Pilihan " + i + " :", el("input", { type: "text", id: "t-pil-" + i, placeholder: "Teks pilihan " + i })));
+                }
+                const btn = el("button", { type: "button", className: "t-btn" }, "OK");
+                btn.addEventListener("click", prosesLangkah2);
+                box.append(btn);
+                box.hidden = false;
+            }
+            function prosesLangkah2() {
+                const temp = [];
+                for (let i = 1; i <= jml; i++) {
+                    const v = $("t-pil-" + i).value.trim();
+                    if (v === "") {
+                        alert("Pilihan " + i + " belum diisi. Silakan isi semua pilihan.");
+                        $("t-pil-" + i).focus(); return;
+                    }
+                    temp.push(v);
+                }
+                pilihan.length = 0;
+                pilihan.push(...temp);
+                bersihkanDari(3);
+                buatPilihanTampil();
+            }
+
+            //Langkah 3: radio button / drop down (loop)
+            function buatPilihanTampil() {
+                const box = $("t-step3");
+                const mode = el("select", { id: "t-mode" });
+                mode.append(el("option", { value: "radio" }, "Radio Button"), el("option", { value: "dropdown" }, "Drop Down"));
+                const opsi = el("div", { id: "t-opsi", className: "t-opsi" });
+
+                mode.addEventListener("change", () => renderOpsi(mode.value, opsi));
+                const btn = el("button", { type: "button", className: "t-btn" }, "OK");
+                btn.addEventListener("click", prosesLangkah3);
+
+                box.append(row("Tampilkan sebagai :", mode), el("div", { className: "t-label" }, "Pilihan :"), opsi, btn);
+                renderOpsi("radio", opsi);
+                box.hidden = false;
+            }
+            function renderOpsi(mode, wadah) {
+                wadah.replaceChildren();
+                if (mode === "radio") {
+                    for (let i = 0; i < pilihan.length; i++) {
+                        const id = "t-radio-" + i;
+                        const lbl = el("label", { htmlFor: id, className: "t-radio" });
+                        lbl.append(el("input", { type: "radio", name: "t-radio", id: id, value: i, checked: i === 0 }), " " + pilihan[i]);
+                        wadah.append(lbl);
+                    }
+                } else {
+                    const sel = el("select", { id: "t-dropdown" });
+                    for (let i = 0; i < pilihan.length; i++) sel.append(el("option", { value: i }, pilihan[i]));
+                    wadah.append(sel);
+                }
+            }
+            function prosesLangkah3() {
+                const mode = $("t-mode").value;
+                let idx = -1;
+                if (mode === "radio") {
+                    const r = document.querySelector('input[name="t-radio"]:checked');
+                    if (r) idx = Number(r.value);
+                } else {
+                    idx = Number($("t-dropdown").value);
+                }
+                if (!(idx >= 0 && idx < pilihan.length)) {
+                    alert("Silakan pilih salah satu opsi."); return;
+                }
+                terpilih = pilihan[idx];
+                bersihkanDari(4);
+                buatInputEmail();
+            }
+
+            //Langkah 4: email + pattern matching
+            function buatInputEmail() {
+                const box = $("t-step4");
+                const inp = el("input", { type: "text", id: "t-email", placeholder: "email@domain.com" });
+                const btn = el("button", { type: "button", className: "t-btn" }, "OK");
+                btn.addEventListener("click", prosesLangkah4);
+                box.append(row("Email :", inp), btn);
+                box.hidden = false;
+            }
+            function prosesLangkah4() {
+                const email = $("t-email").value.trim();
+                const pola = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}$/;
+                if (!pola.test(email)) {
+                    alert("Format email tidak valid. Contoh: nama@domain.com\nSilakan masukkan ulang.");
+                    $("t-email").value = ""; $("t-email").focus(); return;
+                }
+                tampilkanHasil(email);
+            }
+
+            //Output (DOM)
+            function tampilkanHasil(email) {
+                const out = $("t-output");
+                out.textContent = "Hallo, nama saya " + nama + ", email " + email +
+                    " saya mempunyai sejumlah " + jml + " pilihan yaitu " + pilihan.join(", ") +
+                    ", dan saya memilih " + terpilih;
+                out.hidden = false;
+            }
+
+            $("t-ok1").addEventListener("click", prosesLangkah1);
+        })();
+    </script>
+
+</body>
+
+</html>
